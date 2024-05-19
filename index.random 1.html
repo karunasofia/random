@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    <title>Random color</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body{
+ margin:0;
+padding:0;
+background: #74c3c7; ;
+font-family:"montserrat";
+}
+.color{
+margin-top: 300px;
+text-align:center;
+}
+#hex{
+display:block;
+color:white;
+font-size:40px ;
+text-transform:uppercase;
+margin:20px;
+}
+.color button{
+background: none;
+outline:none ;
+color:white;
+border: 3px solid white;
+cursor:pointer;
+font-size: 24px;
+
+}
+</style>
+</head>
+<body>
+<div class="color">
+<span id="hex">#e74c3c</span>
+<button  onclick="getnewcolor()">Get new color</button>
+</div>
+<script type="text/javascript">
+function getnewcolor(){
+var symbols,color;
+symbols = "0123456789ABCDEF";
+color = "#";
+for(var i =0;i<6;i++){
+    color = color+ symbols[Math.floor(Math.random() * 16)];
+}
+
+document.body.style.background=color;
+document.getElementById("hex").innerHTML=color;
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
